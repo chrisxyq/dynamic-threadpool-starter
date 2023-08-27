@@ -19,7 +19,10 @@ public class ThreadPoolParamService {
      */
     //@QConfig("ThreadPoolConfiguration.json")
     private ThreadPoolConfigItems configItems;
-
+    //@QConfig("ThreadPoolConfiguration.json")
+    private void onChange(ThreadPoolConfigItems items) {//监听模式
+        //根据qconfig参数变化，修改应用内线程池配置
+    }
     public ThreadPoolParam getThreadPoolParam(String poolName) {
         if (configItems == null || CollectionUtils.isEmpty(configItems.getThreadPoolConfigItems())) {
             return null;
